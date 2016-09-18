@@ -1,5 +1,12 @@
 package com.company;
 
+import java.util.LinkedList;
+
+/*
+Quick Notes
+array[y][x] is defined as so...
+
+*/
 public class Main {
 
     public static void main(String[] args) {
@@ -8,8 +15,107 @@ public class Main {
         fillboard(board);
         printboard(board);
 
+        possibleentries(board,0,0);
+
     }
 
+    //Checks if the board is full/complete...Returns true if full, false if it is not full i.e. Unsolved Sudoku.
+    public static boolean fullboard(int[][] board){
+
+        for(int i=0;i<9;i++){
+            for(int j=0; j<9;j++) {
+                if(board[i][j] == 0){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static boolean inarray(LinkedList<Integer> list, int value){
+
+        for(int i = 0; i<list.size(); i++){
+            if(list.get(i) == value){
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+    //Returns the possible entries in one cell of the board.
+    public static LinkedList possibleentries(int[][] board,int i,int j){
+
+        LinkedList<Integer> entryarray = new LinkedList<>();
+        LinkedList<Integer> alreadyin = new LinkedList<>();
+
+        //Three checks
+        //Check 1...Horizontal Line Check...
+        for(int k = 0; k<9; k++){
+            if(board[i][k] == 0){
+
+            }else{
+                alreadyin.add(board[i][k]);
+            }
+        }
+
+        //Check 1...Verticle Line Check...
+        for(int l = 0; l<9; l++) {
+            if (board[l][j] == 0) {
+            } else {
+                if (inarray(alreadyin, board[l][j]) == false) {
+                    alreadyin.add(board[l][j]);
+                }
+            }
+        }
+
+        //Top Row of blocks
+        //1st sec
+        if((i>-1 && i>3) && (i>-1 && i>3)){
+
+        }
+        //2nd sec
+        if((i>-1 && i>3) && (j>2 && j<6)){
+
+        }
+        //3rd sec
+        if((i>-1 && i>3) && (j>6 && j<9)){
+
+        }
+        //Middle Row of Blocks
+        //1st sec
+        if((i>2 && i<6) && (j>-1 && j<3)){
+
+        }
+        //2nd sec
+        if((i>2 && i<6) && (j>2 && j<6)){
+
+        }
+        //3rd sec
+        if((i>2 && i<6) && (j>6 && j<9)){
+
+        }
+        //Last Row of Blocks
+        //1st sec
+        if((i>6 && i<9) && (j>-1 && j<3)){
+
+        }
+        //2nd sec
+        if((i>6 && i<9) && (j>2 && j<6)){
+
+        }
+        //3rd sec
+        if((i>6 && i<9) && (j>6 && j<9)){
+
+        }
+
+
+
+        //System.out.println(alreadyin.get(3));
+
+
+        return entryarray;
+    }
 
     //Populates the board with numbers...
     public static int[][] fillboard(int[][] board){
