@@ -5,6 +5,7 @@ import java.util.LinkedList;
 /*
 Quick Notes
 array[y][x] is defined as so...
+Group Members: Jared, Krupa and Zayyan
 
 */
 public class Main {
@@ -13,36 +14,40 @@ public class Main {
 	// write your code here/**
         int[][] board = new int[9][9];
         fillboard(board);
-        //printboard(board);
+        System.out.println("Unsolved Sudoku Puzzle!");
+        System.out.println();
+        printboard(board);
+        System.out.println();
+        System.out.println("Solve Sudoku Puzzle Started!");
+        System.out.println();
         solveboard(board);
 
-        //possibleentries(board,0,5);
-
     }
-
     //Solve Sudoku Backtracking Problem...
     public static void solveboard(int[][] board){
 
-        int x = 0;
-        int y = 0;
+        int i = 0;
+        int j = 0;
 
 
         if(fullboard(board) == true){
             System.out.println("Sudoku Puzzle Solved!");
+            System.out.println();
             printboard(board);
         }else{
             //Found our first empty space (Contains a zero)
-            A:for(int i = 0;i<9;i++){
-                for(int j = 0;j<9;j++){
-                    if(board[i][j] == 0){
-                        x = j;
-                        y = i;
+            A:for(int y = 0;y<9;y++){
+                for(int x = 0;x<9;x++){
+                    if(board[y][x] == 0){
+                        i = y;
+                        j = x;
                         break A;
                     }
                 }
             }
 
-            LinkedList<Integer> possibilities = possibleentries(board, y,x);
+            LinkedList<Integer> possibilities = possibleentries(board, i,j);
+
             int[] array = new int[possibilities.size()];
             for(int z = 0;z<array.length;z++){
               array[z] = possibilities.get(z);
@@ -51,21 +56,20 @@ public class Main {
 
 
 
-            for(int k = 0; k<possibilities.size();k++){
-                if(array[0] != 0){
-                    board[y][x] = array[k];
-                    System.out.println("Test: "+board[y][x]);
+            for(int k = 0; k<array.length;k++){
+                if(array[k] != 0){
+                    board[i][j] = array[k];
+                    //System.out.println("Test: "+board[i][j]);
                     solveboard(board);
                 }
             }
-            board[y][x] = 0;
+            board[i][j] = 0;
+
 
         }
 
     }
-
-
-    //Checks if the board is full/complete...Returns true if full, false if it is not full i.e. Unsolved Sudoku.
+        //Checks if the board is full/complete...Returns true if full, false if it is not full i.e. Unsolved Sudoku.
     public static boolean fullboard(int[][] board){
 
         for(int i=0;i<9;i++){
@@ -227,6 +231,8 @@ public class Main {
             }
         }
 
+
+/*
         printboard(board);
         System.out.println("Invalid Entries: ");
         for(n = 0; n<alreadyin.size();n++){
@@ -240,7 +246,7 @@ public class Main {
             System.out.println(possibleentry.get(n));
 
         }
-
+*/
 
         return possibleentry;
     }
@@ -336,19 +342,34 @@ public class Main {
     //Print outs a 9x9 board...
     public static void printboard(int[][] board){
 
-        for(int i=0;i<9;i++){
-            for(int j=0; j<9;j++) {
-                if (j==0) {
+
+        int j,i;
+
+        for(i=0;i<9;i++) {
+            for (j = 0; j < 9; j++) {
+                if (j == 0) {
                     System.out.print(board[i][j]);
-                }else{
+                } else {
+                    if(j == 3 || j == 6){
+                        System.out.print(" *");
+                    }
                     System.out.print(" " + board[i][j]);
                 }
             }
-            System.out.println();
-        }
-        System.out.println("Code Complete!");
-    }
+            if (i == 2 || i == 5) {
+                System.out.println();
+                for(int k = 0; k<9+2; k++){
+                    System.out.print("* ");
 
+                }
+                System.out.println();
+            }else{
+                System.out.println();
+            }
+        }
+        //System.out.println();
+    }
+    //Used to arrange the list of optional entries...
     public static int[] mergeSort(int[] array,int left, int right){
 
         int n = array.length;
@@ -378,7 +399,6 @@ public class Main {
                 }
             }
         }
-
         return array;
 
     }
