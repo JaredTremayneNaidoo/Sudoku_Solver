@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Aim}{3}
+\contentsline {subsection}{\numberline {1.2}Objective}{3}
+\contentsline {subsection}{\numberline {1.3}Background and History}{3}
+\contentsline {section}{\numberline {2}Analysis and Algorithm}{4}
+\contentsline {subsection}{\numberline {2.1}Backtracking Algorithm}{4}
+\contentsline {section}{\numberline {3}Implementation}{4}
+\contentsline {section}{\numberline {4}Results}{4}
+\contentsline {section}{\numberline {5}Conclusion}{4}
+\contentsline {section}{\numberline {6}Glossary}{4}
+\contentsline {section}{\numberline {7}Appendix}{5}
+\contentsline {subsection}{\numberline {7.1}Dataset}{5}
+\contentsline {subsection}{\numberline {7.2}Results}{5}
+\contentsline {section}{\numberline {8}References}{5}
+\contentsline {section}{\numberline {9}Group contribution}{5}
