@@ -181,24 +181,23 @@ Let $k$ denote the number of candidate cells at the initial configuration.(Indic
 \end{longtable}
 }
 Let $n =$ number of cadidate cells.\\
+
 Base case: $n = 2$\\
 We have a Sudoku grid that has two cadidate cells : cell A and cell B. Cell A having a set $S_1 = {a,b}$ ie. Cell A has two possible options to be filled with. The first choice is taken - filled with $a$. \\
 CASE 1: Then we go to cell B. Cell B has one option available in it's set $S = {b}$. Cell B is filled with $b$. The grid is then filled according to the definition and the the solution is produced with the backtracking.  \\
 CASE 2: Then we go to cell B. Cell B has no options available in it's set $S = {\emptyset}$. The backtracking algorithm is implemented. The pointer now points to the previously filled cell : cell A. Looking at Cell A's set $S_2 = {a,b}$, we now assign a new numeral to the cell from the set. Assign cell A with $b$. The algorithm goes to cell B which now has a non-empty set of options for this candidate cell. The cell B is now filled, completing the Sudoku puzzle according to the definition. 
-
-
+\newline
 Inductive Hypothesis: $n = k-1, k<=64$\\
 We have a Sudoku grid that has $k-1$ cadidate cells. Each of the candidate cells having at maximum 9 items in their set of possible values. We assume that the grid is filled using the backtracking algorithm. \\
 CASE 3: $k-1$ candidate cells filled without backtracking. \\
 CASE 4: $k-1$ candidate cells some cells filled using the backtracking algorithm, while the rest are filled without using the backtracking algorithm. \\
-CASE 5: $k-1$ candidate cells where ar each cell encountered, the backtracking algorithm has to be executed to fill all the cells. 
-\paragraph{
+CASE 5: $k-1$ candidate cells where each cell encountered, the backtracking algorithm has to be executed to fill all the cells. 
+\newline
 Inductive Step: $n = k, k<=64$\\
-We have a Sudoku grid that has $k$ cadidate cells. Each of the candidate cells having at maximum 9 items in their set of possible values. We assume that the $k-1$ is filled using the backtracking algorithm. \\
-CASE 6: From the inductive hypothesis, $k-1$ candidate cells filled without an backtracking, taking constant time. The $k^{th}$ cell also having a single option which we choose, not having to back-track. \\
-CASE 7: $k-1$ candidate cells some cells filled using the backtracking algorithm, while the rest are filled without using the backtracking algorithm, while the $k^{th}$ cell can be either filled using trac \\
-CASE 5: $k-1$ candidate cells where ar each cell encountered, the backtracking algorithm has to be executed to fill all the cells. 
-}
+We have a Sudoku grid that has $k$ cadidate cells. Each of the candidate cells having at maximum 9 items in their set of possible values. We assume that the $k-1$ is filled using the respective cases in the inductive hypothesis. \\
+CASE 6: From the inductive hypothesis CASE 3, $k-1$ candidate cells filled without an backtracking, taking constant time. The $k^{th}$ cell also having a single option which we choose, not having to back-track.  \\
+CASE 7: Following from CASE 4 of the Inductive hypothesis, of the $k-1$ candidate cells some cells filled using the backtracking algorithm, while the rest are filled without using the backtracking algorithm. The $k^{th}$ cell can be either filled using back traking or could have an option that can be chosen resulting in a valid solution. \\
+CASE 8: Following from CASE 5 of the Inductive hypothesis, $k-1$ candidate cells are filled using the backtracking algorithm as each cell. The $k^{th}$ cell has no possible options, resulting in backtracking to the very first initial candidate cell to be ammended either resulting in a valid solution or in a dead-emd after exhasutive execution, hence not able to obtain a solution that adheres to the Sudoku puzzle definition. 
 \end{flushleft}
 \begin{flushleft}
 \textbf{Best case:}\\
@@ -206,8 +205,13 @@ The first input to a void cell does not infringe the stipulation of the puzzle. 
 Hence, the complexity of the best case is  $O(1)$, which means it takes constant time and produces a straight line function.
 \end{flushleft}
 \begin{flushleft}
-\textbf{Worst case:}\\
-Let $k$ denote the number of cells in the grid 
+\textbf{Average case:}\\
+An acyclic tree is created as an analogy for our valid output. We assign an arbitary root node 'A'. For each empty cell, there are 9 possibilities (numerals from 1 to 9). We add 9 nodes to the tree where each node represents a eligible digit for the first cell. We then connect these nodes to the root node ny adding 9 edges. We then consider the second candidate cell. We again denote the 9 possible imputs and add another layer to the tree. We continue in this manner, which leads to $k$ levels of the tree, which excludes the root node. This tree now represents each possible solution that could be used for the puzzle as produced in the light of brute force technique. The backtracking algorithm will follow a  similar approach to that of a depth first search. It goes as far as possible along a branch of the tree, stopping at the point it violates any of the contengencies. At this point, we backtrack and try and find another branc. The complexity of a depth-first-search is $O(n+m)$, where $n = $ number of nodes and $m = $ the number of edges. In this instance, $n = 9^k$ and $k$ is the number of candidate cells.   
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{Worst Case:}\\
+Similar to that of the average case, in this scenario, we backtrack at every encounter with a candidate cell, and making the maximum number of this recussive process in order to output a valid solution to the puzzle, or to have exhausted all means to find a solution resulting in the conclusion that no solution i possible for the particular puzzle. In the worst case, we would have the least number of clues; 17 clues at the initial configuration, hence, the grid having 64 candidate cells ($k = 81-17 = 64$). Thus we are certain that our $k$ ican have a maximum value of 64. In the absolute worst case, we will have a order $O(9^64)$, where $n = 9 and k = 64$. We can further claim that this is the upperbound for our worst case.  
 \end{flushleft}
 \subsection{Optimality}
 \begin{flushleft}
@@ -216,7 +220,7 @@ TO ADD!
 
 \subsection{Clarity and Completeness}
 \begin{flushleft}
-TO ADD!
+As a group, we feel that the backtracking algorithm is not the optimal manner in which to go about solving a Sudoku puzzle. Theoratically the puzzle can be solved in this recurssive manner. The concept can be followed through, thus we can claim it is fairly clear algorithm, although not seen as effecient in termsof performance measure. 
 \end{flushleft}
 
 \section{Experimental Methodology}
@@ -278,6 +282,7 @@ Rule 3: Similar to that of rule 2. We just apply the same concept to each row an
 \item Polyomino:
 A shape composed of equal sized, side-adjacent squares. Often used for Sudoku region variants.
 \item Clue: The cells which are filled with a value at the start configuration.
+\item Depth-first search (DFS): is an algorithm for traversing or searching tree or graph data structures. One starts at the root (selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before backtracking.
 
 \end{itemize}
 \section{Appendix}
