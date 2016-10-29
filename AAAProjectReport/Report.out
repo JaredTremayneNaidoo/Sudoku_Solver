@@ -7,23 +7,24 @@
 \BOOKMARK [2][-]{subsection.2.1}{Problem analysis}{section.2}% 7
 \BOOKMARK [2][-]{subsection.2.2}{Backtracking Algorithm}{section.2}% 8
 \BOOKMARK [1][-]{section.3}{Theoretical Analysis}{}% 9
-\BOOKMARK [2][-]{subsection.3.1}{Proof of time complexity}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.2}{Best and worst cases}{section.3}% 11
-\BOOKMARK [2][-]{subsection.3.3}{Optimality}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.4}{Clarity and Completeness}{section.3}% 13
-\BOOKMARK [1][-]{section.4}{Experimental Methodology}{}% 14
-\BOOKMARK [2][-]{subsection.4.1}{}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.2}{Optimization}{section.4}% 16
-\BOOKMARK [1][-]{section.5}{Implementation: Trial}{}% 17
-\BOOKMARK [1][-]{section.6}{Results}{}% 18
-\BOOKMARK [2][-]{subsection.6.1}{Presentation of results}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.2}{Interpretation of results}{section.6}% 20
-\BOOKMARK [1][-]{section.7}{Theoretical analysis relation to experimental analysis}{}% 21
-\BOOKMARK [1][-]{section.8}{Conclusion}{}% 22
-\BOOKMARK [1][-]{section.9}{Glossary}{}% 23
-\BOOKMARK [1][-]{section.10}{Appendix}{}% 24
-\BOOKMARK [2][-]{subsection.10.1}{Data set}{section.10}% 25
-\BOOKMARK [2][-]{subsection.10.2}{Results}{section.10}% 26
-\BOOKMARK [1][-]{section.11}{References}{}% 27
-\BOOKMARK [1][-]{section.12}{Algorithm implementation}{}% 28
-\BOOKMARK [1][-]{section.13}{Group contribution}{}% 29
+\BOOKMARK [2][-]{subsection.3.1}{Complexity}{section.3}% 10
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Best and worst cases}{subsection.3.1}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Time complexity}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.3}{Optimality}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.4}{Clarity and Completeness}{section.3}% 14
+\BOOKMARK [1][-]{section.4}{Experimental Methodology}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.2}{Optimization}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{Implementation: Trial}{}% 18
+\BOOKMARK [1][-]{section.6}{Results}{}% 19
+\BOOKMARK [2][-]{subsection.6.1}{Presentation of results}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.2}{Interpretation of results}{section.6}% 21
+\BOOKMARK [1][-]{section.7}{Theoretical analysis relation to experimental analysis}{}% 22
+\BOOKMARK [1][-]{section.8}{Conclusion}{}% 23
+\BOOKMARK [1][-]{section.9}{Glossary}{}% 24
+\BOOKMARK [1][-]{section.10}{Appendix}{}% 25
+\BOOKMARK [2][-]{subsection.10.1}{Data set}{section.10}% 26
+\BOOKMARK [2][-]{subsection.10.2}{Results}{section.10}% 27
+\BOOKMARK [1][-]{section.11}{References}{}% 28
+\BOOKMARK [1][-]{section.12}{Algorithm implementation}{}% 29
+\BOOKMARK [1][-]{section.13}{Group contribution}{}% 30

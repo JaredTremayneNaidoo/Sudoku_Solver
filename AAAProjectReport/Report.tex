@@ -43,7 +43,7 @@ A formal statement on the results of the investigation of the standard Sudoku pu
 \subsection{The Problem}
 A Sudoku puzzle is completed on a polymino board or main grid of $ n^2 \times n^2$ cells. The board is further outlined, demarcating $n \times n $ sub-grids. The order of the puzzle is $n$. \\
 In particular, we are doing an investigation of a standard Sudoku puzzle, which is a puzzle of 81 cells in total. The order is 3, as $n = 3$, hence we get a main grid of size $3^2\times 3^2$, with 9 sub-grids, each of size $ 3\times 3 $ .\\
-The goal of this puzzle is to fill the grid with integers of the values 1 to 9 with the restriction of a single digit only appearing once in a particular row, column and sub-grid. The standard Sudoku puzzle comes partially filled, leaving the player to complete the grid whilst adhering to the restrictions placed. We note that the cells which are  filled with a value is called a \textsl{clue}. A valid solution can we obtained using the clues and the definition of a Sudoku puzzle.  
+The goal of this puzzle is to fill the grid with integers of the values 1 to $n^2$, in this case to 9, with the restriction of a single digit only appearing once in a particular row, column and sub-grid. The standard Sudoku puzzle comes partially filled, leaving the player to complete the grid whilst adhering to the restrictions placed. We note that the cells which are  filled with a value is called a \textsl{clue}. A valid solution can we obtained using the clues and the definition of a Sudoku puzzle.  
   
 \subsection{Aim}
 \begin{flushleft}
@@ -108,29 +108,107 @@ Computer programs use a different Sudoku-solving  technique. Relying on their al
 
 \subsection{Backtracking Algorithm}
 \begin{flushleft}
-The backtracking algorithm is a powerful means of solving a constraint satisfaction problems. This manner is more effecient to that of the brute force technique. 
+The backtracking algorithm is a powerful means of solving a constraint satisfaction problems. This manner is more effecient to that of the brute force technique as uses less memory.
 The algorithm can be seen as permutation which are being applied, and if a certain pattern didn't match, we find another, until a certain pattern matches.
 Essentially, in an incremental fashion, the algorithm, builds candidates to the solutions, and discards each partial candidate ('backtracks') as soon as it is noted that this specific candidate cannot possibly be inserted in obtaining a valid solution. 
 Backtracking requires recursion which can be something worse, because CPU stack space is limited and can be consumed quickly by recursion.
-\newline
+\end{flushleft}
 
+\begin{flushleft}
+An overview of the algorithm:\\
 This algorithm follows the procedure of scanning through the Sudoku-board, filling in blank cells with a valid number (ie. adhering to the Sudoku-puzzle rules: no two same numbers in any row, column or 3X3 box). This process continues to the next empty cell, filling up empty cells. When a particular cell is reached where no valid input is available (where all possible numbers from 1 to 9 cannot be placed, as Sudoku-puzzle rules are not satisfied), the algorithm moves back to the previous cell and makes amendments to that cell's value to another valid number. The procedure then continues, it moves back to the next cell and the entire process repeats till the entire board is filled with valid inputs which adhere to the contingencies. 
+\end{flushleft}
+
+\begin{flushleft}
+A more structuresd format of the algorithm: \\
+Starting from the first empty cell top left corner, iterating through all the columns of the row, the following steps are followed recurrsively. \\
+\begin{enumerate}
+\item If the cell is empty, add a number that is not constrained.
+\begin{itemize}
+\item \textbf{If} it is impossible to insert a number which adheres to the Sudoku puzzle definition, report failure 
+\item \textbf{Else} Start a new thread on a new cell, starting from Step2.
+\begin{itemize}
+\item \textbf{If} this thread reports failure, repeat Step 2, with a a different number and exhaust the old number
+\item \textbf{If} this thread reports success, we report success, as we make the assumption that the last cell has been successfully complete.  
+\end{itemize}
+\item \textbf{If} the cell is filled, then go to the next empty cell
+\item \textbf{If} the algorithm tries accessing ground which is out of bound, then we know we have reached success
+\end{itemize}
+\end{enumerate}
 \end{flushleft}
 
 \section{Theoretical Analysis}
 \begin{flushleft}
-TO ADD!
+The definition of the Sudoku puzzle must be abided by at all times ie. very cell must be filled with a unique integer along it's particular row, column and sub-grid.  The backtracking algorithm ensures that if a dead-end is reached (at curr-cell), the the algorithm is executed - undoing the move and returning to the previously filled cell (prev-cell) making a possible change to prev-cell such that it would allow the next cell -curr-cell to be awarded a value that follows the puzzle's definition. 
 \end{flushleft}
-\subsection{Proof of time  complexity}
+\subsection{Complexity}
 \begin{flushleft}
-TO ADD!
+In general, the complexity of the algorithm is dependednt on the number of clues given at the initial configuration. \\
+The following cases are explred:
 \end{flushleft}
 
-\subsection{Best and worst cases}
+\subsubsection{Best and worst cases}
 \begin{flushleft}
-TO ADD!
+\textbf{Best case:}\\
+No need to implement the backtracking algorithm, hence the path chosen from the first empty cell to the last empty cell in the grid is correct. 
+\end{flushleft}
+\begin{flushleft}
+\textbf{Worst case:}\\
+The backtracking algorithm is executed at every step. Every cell which is reached does not satisfy the Sudoku puzzle conditions, hence resulting in the backtracking algorithm being called at each cell in order to reach a final valid configuation.  
 \end{flushleft}
 
+\subsection{Time complexity}
+\begin{flushleft}
+Let $k$ denote the number of candidate cells at the initial configuration.(Indicating the level of completeness and difficulty).\\
+
+
+\begin{flushleft}
+\textbf{Levels}
+\end{flushleft}
+{
+\centering
+\begin{longtable}{| p{3cm} | p{3cm}| p{3cm}| }
+\hline
+\textbf{Level} & \textbf{ Range of clue cells} & \textbf{Upperbound of empty cells}
+
+% Easy
+	\\ \hline Easy & 35-37 & 46
+% Meduim
+	\\ \hline Meduim & 26-31 & 55
+% Hard
+	\\ \hline Hard & 17-26 & 64
+	\\ \hline
+\end{longtable}
+}
+Let $n =$ number of cadidate cells.\\
+Base case: $n = 2$\\
+We have a Sudoku grid that has two cadidate cells : cell A and cell B. Cell A having a set $S_1 = {a,b}$ ie. Cell A has two possible options to be filled with. The first choice is taken - filled with $a$. \\
+CASE 1: Then we go to cell B. Cell B has one option available in it's set $S = {b}$. Cell B is filled with $b$. The grid is then filled according to the definition and the the solution is produced with the backtracking.  \\
+CASE 2: Then we go to cell B. Cell B has no options available in it's set $S = {\emptyset}$. The backtracking algorithm is implemented. The pointer now points to the previously filled cell : cell A. Looking at Cell A's set $S_2 = {a,b}$, we now assign a new numeral to the cell from the set. Assign cell A with $b$. The algorithm goes to cell B which now has a non-empty set of options for this candidate cell. The cell B is now filled, completing the Sudoku puzzle according to the definition. 
+
+
+Inductive Hypothesis: $n = k-1, k<=64$\\
+We have a Sudoku grid that has $k-1$ cadidate cells. Each of the candidate cells having at maximum 9 items in their set of possible values. We assume that the grid is filled using the backtracking algorithm. \\
+CASE 3: $k-1$ candidate cells filled without backtracking. \\
+CASE 4: $k-1$ candidate cells some cells filled using the backtracking algorithm, while the rest are filled without using the backtracking algorithm. \\
+CASE 5: $k-1$ candidate cells where ar each cell encountered, the backtracking algorithm has to be executed to fill all the cells. 
+\paragraph{
+Inductive Step: $n = k, k<=64$\\
+We have a Sudoku grid that has $k$ cadidate cells. Each of the candidate cells having at maximum 9 items in their set of possible values. We assume that the $k-1$ is filled using the backtracking algorithm. \\
+CASE 6: From the inductive hypothesis, $k-1$ candidate cells filled without an backtracking, taking constant time. The $k^{th}$ cell also having a single option which we choose, not having to back-track. \\
+CASE 7: $k-1$ candidate cells some cells filled using the backtracking algorithm, while the rest are filled without using the backtracking algorithm, while the $k^{th}$ cell can be either filled using trac \\
+CASE 5: $k-1$ candidate cells where ar each cell encountered, the backtracking algorithm has to be executed to fill all the cells. 
+}
+\end{flushleft}
+\begin{flushleft}
+\textbf{Best case:}\\
+The first input to a void cell does not infringe the stipulation of the puzzle. This statement holds true for all empty cells in the grid. Hence, resulting in the algorithm never having to backtrack - regardless of the initial configuration of the grid. Therefore since it always produces a valid digit on the first encounter with the cell, it will never have to backtrack to previous nodes in the tree of 'to-fill nodes'. Thus the order is constant, such that $n = O(1^k) $, where $k$ is the upperbound being $k = 64$. However, $n = 1^64$ is still 1. \\
+Hence, the complexity of the best case is  $O(1)$, which means it takes constant time and produces a straight line function.
+\end{flushleft}
+\begin{flushleft}
+\textbf{Worst case:}\\
+Let $k$ denote the number of cells in the grid 
+\end{flushleft}
 \subsection{Optimality}
 \begin{flushleft}
 TO ADD!
@@ -217,6 +295,7 @@ A shape composed of equal sized, side-adjacent squares. Often used for Sudoku re
 \item \url{http://byteauthor.com/2010/08/sudoku-solver/ (2016-10-07)}
 \item\url https://codemyroad.wordpress.com/2014/05/01/solving-sudoku-by-backtracking/ (2016-10-25)
 \item \url https://en.wikipedia.org/wiki/GlossaryofSudoku (2016-10-25)
+\item \url http://www.diva-portal.org/smash/get/diva2:721641/FULLTEXT01.pdf (2016-10-29)
 \end{itemize}
 
 section{Acknowledgments}

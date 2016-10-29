@@ -7,23 +7,24 @@
 \contentsline {subsection}{\numberline {2.1}Problem analysis}{7}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Backtracking Algorithm}{8}{subsection.2.2}
 \contentsline {section}{\numberline {3}Theoretical Analysis}{9}{section.3}
-\contentsline {subsection}{\numberline {3.1}Proof of time complexity}{9}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Best and worst cases}{9}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Optimality}{9}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Clarity and Completeness}{9}{subsection.3.4}
-\contentsline {section}{\numberline {4}Experimental Methodology}{9}{section.4}
-\contentsline {subsection}{\numberline {4.1}}{9}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Optimization}{10}{subsection.4.2}
-\contentsline {section}{\numberline {5}Implementation: Trial}{10}{section.5}
-\contentsline {section}{\numberline {6}Results}{11}{section.6}
-\contentsline {subsection}{\numberline {6.1}Presentation of results}{11}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Interpretation of results}{11}{subsection.6.2}
-\contentsline {section}{\numberline {7}Theoretical analysis relation to experimental analysis}{11}{section.7}
-\contentsline {section}{\numberline {8}Conclusion}{11}{section.8}
-\contentsline {section}{\numberline {9}Glossary}{11}{section.9}
-\contentsline {section}{\numberline {10}Appendix}{12}{section.10}
-\contentsline {subsection}{\numberline {10.1}Data set}{12}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Results}{12}{subsection.10.2}
-\contentsline {section}{\numberline {11}References}{12}{section.11}
-\contentsline {section}{\numberline {12}Algorithm implementation}{12}{section.12}
-\contentsline {section}{\numberline {13}Group contribution}{13}{section.13}
+\contentsline {subsection}{\numberline {3.1}Complexity}{9}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Best and worst cases}{9}{subsubsection.3.1.1}
+\contentsline {subsection}{\numberline {3.2}Time complexity}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Optimality}{11}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Clarity and Completeness}{11}{subsection.3.4}
+\contentsline {section}{\numberline {4}Experimental Methodology}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Optimization}{12}{subsection.4.2}
+\contentsline {section}{\numberline {5}Implementation: Trial}{13}{section.5}
+\contentsline {section}{\numberline {6}Results}{13}{section.6}
+\contentsline {subsection}{\numberline {6.1}Presentation of results}{13}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Interpretation of results}{13}{subsection.6.2}
+\contentsline {section}{\numberline {7}Theoretical analysis relation to experimental analysis}{13}{section.7}
+\contentsline {section}{\numberline {8}Conclusion}{13}{section.8}
+\contentsline {section}{\numberline {9}Glossary}{14}{section.9}
+\contentsline {section}{\numberline {10}Appendix}{15}{section.10}
+\contentsline {subsection}{\numberline {10.1}Data set}{15}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Results}{15}{subsection.10.2}
+\contentsline {section}{\numberline {11}References}{15}{section.11}
+\contentsline {section}{\numberline {12}Algorithm implementation}{15}{section.12}
+\contentsline {section}{\numberline {13}Group contribution}{16}{section.13}
