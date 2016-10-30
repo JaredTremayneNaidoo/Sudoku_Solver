@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.13)  30 OCT 2016 02:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.13)  30 OCT 2016 02:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -387,8 +387,8 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 128.
  [9]
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
-[]|\OT1/cmr/bx/n/12 Upperbound
+Underfull \hbox (badness 2197) in paragraph at lines 172--173
+[]|\OT1/cmr/bx/n/12 Upper bound
  []
 
 
@@ -474,7 +474,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 344--345
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 346--346
-[]|\OT1/cmr/m/n/12 Implemenation
+[]|\OT1/cmr/m/n/12 Implementation
  []
 
 
@@ -484,7 +484,7 @@ Underfull \hbox (badness 4001) in paragraph at lines 346--346
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 346--346
-[]|\OT1/cmr/m/n/12 Implemenation
+[]|\OT1/cmr/m/n/12 Implementation
  []
 
 
@@ -494,12 +494,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--346
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 346--347
-[]|\OT1/cmr/m/n/12 Theoratical
+[]|\OT1/cmr/m/n/12 Theoretical
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 347--347
-[]|\OT1/cmr/m/n/12 Implemenation
+[]|\OT1/cmr/m/n/12 Implementation
  []
 
 
@@ -509,7 +509,7 @@ Underfull \hbox (badness 4378) in paragraph at lines 347--347
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 347--347
-[]|\OT1/cmr/m/n/12 Theoratical
+[]|\OT1/cmr/m/n/12 Theoretical
  []
 
 
@@ -519,7 +519,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 348--348
-[]|\OT1/cmr/m/n/12 Theoratical
+[]|\OT1/cmr/m/n/12 Theoretical
  []
 
 
@@ -528,8 +528,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 348--349
  []
 
 
-Underfull \hbox (badness 6016) in paragraph at lines 349--350
-\OT1/cmr/m/n/12 tween the-o-rat-i-
+Underfull \hbox (badness 7685) in paragraph at lines 349--350
+\OT1/cmr/m/n/12 tween the-o-ret-i-
  []
 
 
@@ -558,7 +558,7 @@ Here is how much of TeX's memory you used:
  10039 multiletter control sequences out of 15000+600000
  13578 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,40p,1138b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,40p,1140b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
@@ -568,7 +568,7 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report.pdf (20 pages, 138368 bytes).
+Output written on Report.pdf (20 pages, 138344 bytes).
 PDF statistics:
  319 PDF objects out of 1000 (max. 8388607)
  285 compressed objects within 3 object streams
