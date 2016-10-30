@@ -44,14 +44,27 @@ A formal statement on the results of the investigation of the standard Sudoku pu
 A Sudoku puzzle is completed on a polymino board or main grid of $ n^2 \times n^2$ cells. The board is further outlined, demarcating $n \times n $ sub-grids. The order of the puzzle is $n$. \\
 In particular, we are doing an investigation of a standard Sudoku puzzle, which is a puzzle of 81 cells in total. The order is 3, as $n = 3$, hence we get a main grid of size $3^2\times 3^2$, with 9 sub-grids, each of size $ 3\times 3 $ .\\
 The goal of this puzzle is to fill the grid with integers of the values 1 to $n^2$, in this case to 9, with the restriction of a single digit only appearing once in a particular row, column and sub-grid. The standard Sudoku puzzle comes partially filled, leaving the player to complete the grid whilst adhering to the restrictions placed. We note that the cells which are  filled with a value is called a \textsl{clue}. A valid solution can we obtained using the clues and the definition of a Sudoku puzzle.  
-  
+
+\subsection{Background and History}
+\begin{flushleft}
+Number Place - is the original name for a Sudoku Puzzle.
+A Sudoku Puzzle is a logic based puzzle filled with various combinations of numbers. The objective of the puzzle is to have nine $3\times3$ grid filled with the numbers 1 to 9, without repetition in the sub grid, it's row and it's respective column of position, outputting a unique solution. This particular number puzzle had made it's first appearance in the late 19th century's French newspapers, when puzzle setters begun amending and manipulating numbers in the magic squares. 
+\\
+The roots of a Sudoku Puzzle is the Magic Square, which is particularly seen as a powerful means of representing combinatoral numbers in various respects of science. Great ancient Indian mathematician, Varahamihira, used a fourth-order magic square to specify recipes for making perfumes. Even as early as (ca. 900 A.D.), in Siddhayoga, displays the oldest dated third-ordered magic square, representing Vrnda's medical work on means to ease childbirth.
+\end{flushleft}
+
+\begin{flushleft}
+Today the Sudoku-puzzle is very popular on PC's, websites and mobile phones. Many people solve these puzzles as a pass time activity.
+\end{flushleft}
+
+ 
 \subsection{Aim}
 \begin{flushleft}
 The scenario at hand is to implement the backtracking algorithm to solve a Sudoku Puzzle. The aim of this assignment is to gain insight into the concept by means of measuring performance of the algorithm and relating these  measurements to the theoretical analysis of the algorithm, through which we explore the nature of Computer Science. 
 \end{flushleft}
 \subsection{Objective}
 \begin{flushleft}
-The objective is achieving the aim of this assignment, is to implement the backtracking algorithm in order to solve a partially filled Sudoku Puzzle grid such that is produces a unique solution. \\
+The objective is achieving the aim of this assignment, by the implemention of the backtracking algorithm in order to solve a partially filled Sudoku Puzzle grid such that it produces a unique solution. \\
 Using the results of the implementation, from our experience and theoretical knowledge, we can give some insight on the performance of the algorithm that is executed. As a group, it is our objective to fulfill the aim of this project by performing theoretical analysis which will be further compared to the experimental results, and used to substantiate our theoretical conclusions, as well as, to obtain the empirical analysis of the Backtracking Algorithm. As stipulated in the project brief, we have been given free rein to choose a programming language in order to implement the algorithm. The algorithm's performance will be tested on a database of standard Sudoku puzzles which will have different input configurations. 
 \end{flushleft}	
 
@@ -71,21 +84,11 @@ The procedure that we will follow :
 \item Implement the algorithm as Java code 
 \item Implement the algorithm to generate a set of results
 \item Comparison of theoretical and experimental results
-\item Graphical interpretation of graphs produced, which represent the time required to solve the puzzle under various initial starting configurations, giving a trend as the average on which we will base our analysis 
+\item Graphical interpretation of obtained results, which represent the time required to solve the puzzle under various initial starting configurations, giving a trend as the composition of all the results on which we will base our analysis 
 \end{enumerate}
 \end{flushleft}
 
-\subsection{Background and History}
-\begin{flushleft}
-Number Place - is the original name for a Sudoku Puzzle.
-A Sudoku Puzzle is a logic based puzzle filled with various combinations of numbers. The objective of the puzzle is to have nine 3X3 grid filled with the numbers 1 to 9, without repetition in the sub grid, it's row and it's respective column of position, outputting a unique solution. This particular number puzzle had made it's first appearance in the late 19th century's French newspapers, when puzzle setters begun amending and manipulating numbers in the magic squares. 
-\\
-The roots of a Sudoku Puzzle is the Magic Square, which is particularly seen as a powerful means of representing combinatoral numbers in various respects of science. Great ancient Indian mathematician, Varahamihira, used a fourth-order magic square to specify recipes for making perfumes. Even as early as (ca. 900 A.D.), in Siddhayoga, displays the oldest dated third-ordered magic square, representing Vrnda's medical work on means to ease childbirth.
-\end{flushleft}
 
-\begin{flushleft}
-Today the Sudoku-puzzle is very popular on PC's, websites and mobile phones. Many people solve these puzzles as a pass time activity.
-\end{flushleft}
 
 \section{Analysis and Algorithm}
 This section will consider the backtracking algorithm and the fundamentals of the Sudoku puzzle. We will explore the essence of various research articles, and literature in aim to gain a concrete understanding of the puzzle and the algorithm. 
@@ -109,14 +112,14 @@ Computer programs use a different Sudoku-solving  technique. Relying on their al
 \subsection{Backtracking Algorithm}
 \begin{flushleft}
 The backtracking algorithm is a powerful means of solving a constraint satisfaction problems. This manner is more effecient to that of the brute force technique as uses less memory.
-The algorithm can be seen as permutation which are being applied, and if a certain pattern didn't match, we find another, until a certain pattern matches.
+The algorithm can be seen as permutations which are being applied, and if a certain pattern doesn't match, we find another, until a certain pattern matches.
 Essentially, in an incremental fashion, the algorithm, builds candidates to the solutions, and discards each partial candidate ('backtracks') as soon as it is noted that this specific candidate cannot possibly be inserted in obtaining a valid solution. 
 Backtracking requires recursion which can be something worse, because CPU stack space is limited and can be consumed quickly by recursion.
 \end{flushleft}
 
 \begin{flushleft}
 An overview of the algorithm:\\
-This algorithm follows the procedure of scanning through the Sudoku-board, filling in blank cells with a valid number (ie. adhering to the Sudoku-puzzle rules: no two same numbers in any row, column or 3X3 box). This process continues to the next empty cell, filling up empty cells. When a particular cell is reached where no valid input is available (where all possible numbers from 1 to 9 cannot be placed, as Sudoku-puzzle rules are not satisfied), the algorithm moves back to the previous cell and makes amendments to that cell's value to another valid number. The procedure then continues, it moves back to the next cell and the entire process repeats till the entire board is filled with valid inputs which adhere to the contingencies. 
+This algorithm follows the procedure of scanning through the Sudoku-board, filling in blank cells with a valid number (ie. adhering to the Sudoku-puzzle rules: no two same numbers in any row, column or $3\times3$ box). This process continues to the next empty cell, filling up empty cells. When a particular cell is reached where no valid input is available (where all possible numbers from 1 to 9 cannot be placed, as Sudoku-puzzle rules are not satisfied), the algorithm moves back to the previous cell and makes amendments to that cell's value to another valid number. The procedure then continues, it moves back to the next cell and the entire process repeats till the entire board is filled with valid inputs which adhere to the contingencies. 
 \end{flushleft}
 
 \begin{flushleft}
@@ -126,20 +129,23 @@ Starting from the first empty cell top left corner, iterating through all the co
 \item If the cell is empty, add a number that is not constrained.
 \begin{itemize}
 \item \textbf{If} it is impossible to insert a number which adheres to the Sudoku puzzle definition, report failure 
-\item \textbf{Else} Start a new thread on a new cell, starting from Step2.
+\item \textbf{Else} Start a new thread on a new cell, starting from Step 2.
+\end{itemize}
+
+\item
 \begin{itemize}
-\item \textbf{If} this thread reports failure, repeat Step 2, with a a different number and exhaust the old number
+\item \textbf{If} this thread reports failure, repeat Step 1, with a different number and exhaust the old number
 \item \textbf{If} this thread reports success, we report success, as we make the assumption that the last cell has been successfully complete.  
 \end{itemize}
 \item \textbf{If} the cell is filled, then go to the next empty cell
 \item \textbf{If} the algorithm tries accessing ground which is out of bound, then we know we have reached success
-\end{itemize}
+
 \end{enumerate}
 \end{flushleft}
 
 \section{Theoretical Analysis}
 \begin{flushleft}
-The definition of the Sudoku puzzle must be abide by at all times ie. very cell must be filled with a unique integer along it's particular row, column and sub-grid.  The backtracking algorithm ensures that if a dead-end is reached (at curr-cell), the the algorithm is executed - undoing the move and returning to the previously filled cell (prev-cell) making a possible change to prev-cell such that it would allow the next cell -curr-cell to be awarded a value that follows the puzzle's definition. 
+The definition of the Sudoku puzzle must be abide by at all times ie. every cell must be filled with a unique integer along it's particular row, column and sub-grid.  The backtracking algorithm ensures that if a dead-end is reached (at curr-cell), the the algorithm is executed - undoing the move and returning to the previously filled cell (prev-cell) making a possible change to prev-cell such that it would allow the next cell -curr-cell to be awarded a value that follows the puzzle's definition. Following this procedure in a recurcive manner.
 \end{flushleft}
 \subsection{Complexity}
 \begin{flushleft}
@@ -185,23 +191,23 @@ Let $n =$ number of candidate cells.\\
 Base case: $n = 2$\\
 We have a Sudoku grid that has two candidate cells : cell A and cell B. Cell A having a set $S_1 = {a,b}$ ie. Cell A has two possible options to be filled with. The first choice is taken - filled with $a$. \\
 CASE 1: Then we go to cell B. Cell B has one option available in it's set $S = {b}$. Cell B is filled with $b$. The grid is then filled according to the definition and the the solution is produced with the backtracking.  \\
-CASE 2: Then we go to cell B. Cell B has no options available in it's set $S = {\emptyset}$. The backtracking algorithm is implemented. The pointer now points to the previously filled cell : cell A. Looking at Cell A's set $S_2 = {a,b}$, we now assign a new numeral to the cell from the set. Assign cell A with $b$. The algorithm goes to cell B which now has a non-empty set of options for this candidate cell. The cell B is now filled, completing the Sudoku puzzle according to the definition. 
+CASE 2: Then we go to cell B. Cell B has no options available in it's set $S_2 = {\emptyset}$. The backtracking algorithm is implemented. The pointer now points to the previously filled cell : cell A. Looking at Cell A's set $S_2 = {a,b}$, we now assign a new numeral to the cell from the set. Assign cell A with $b$. The algorithm goes to cell B which now has a non-empty set of options for this candidate cell. The cell B is now filled, completing the Sudoku puzzle according to the definition. 
 \newline
 Inductive Hypothesis: $n = k-1, k<=64$\\
 We have a Sudoku grid that has $k-1$ candidate cells. Each of the candidate cells having at maximum 9 items in their set of possible values. We assume that the grid is filled using the backtracking algorithm. \\
 CASE 3: $k-1$ candidate cells filled without backtracking. \\
-CASE 4: $k-1$ candidate cells some cells filled using the backtracking algorithm, while the rest are filled without using the backtracking algorithm. \\
+CASE 4: $k-1$ candidate cells, some cells filled using the backtracking algorithm, while the rest are filled without using the backtracking algorithm. \\
 CASE 5: $k-1$ candidate cells where each cell encountered, the backtracking algorithm has to be executed to fill all the cells. 
 \newline
 Inductive Step: $n = k, k<=64$\\
 We have a Sudoku grid that has $k$ candidate cells. Each of the candidate cells having at maximum 9 items in their set of possible values. We assume that the $k-1$ is filled using the respective cases in the inductive hypothesis. \\
 CASE 6: From the inductive hypothesis CASE 3, $k-1$ candidate cells filled without an backtracking, taking constant time. The $k^{th}$ cell also having a single option which we choose, not having to back-track.  \\
 CASE 7: Following from CASE 4 of the Inductive hypothesis, of the $k-1$ candidate cells some cells filled using the backtracking algorithm, while the rest are filled without using the backtracking algorithm. The $k^{th}$ cell can be either filled using back tracking or could have an option that can be chosen resulting in a valid solution. \\
-CASE 8: Following from CASE 5 of the Inductive hypothesis, $k-1$ candidate cells are filled using the backtracking algorithm as each cell. The $k^{th}$ cell has no possible options, resulting in backtracking to the very first initial candidate cell to be amended either resulting in a valid solution or in a dead-end after exhaustive execution, hence not able to obtain a solution that adheres to the Sudoku puzzle definition. 
+CASE 8: Following from CASE 5 of the Inductive hypothesis, $k-1$ candidate cells are filled using the backtracking algorithm as each cell. The $k^{th}$ cell has no possible options, resulting in backtracking to tecursively roll-bacl till the very first initial candidate cell to be amended either resulting in a valid solution or in a dead-end after exhaustive execution, hence not able to obtain a solution that adheres to the Sudoku puzzle definition. 
 \end{flushleft}
 \begin{flushleft}
 \textbf{Best case:}\\
-The first input to a void cell does not infringe the stipulation of the puzzle. This statement holds true for all empty cells in the grid. Hence, resulting in the algorithm never having to backtrack - regardless of the initial configuration of the grid. Therefore since it always produces a valid digit on the first encounter with the cell, it will never have to backtrack to previous nodes in the tree of 'to-fill nodes'. Thus the order is constant, such that $n = O(1^k) $, where $k$ is the upper bound being $k = 64$. However, $n = 1^64$ is still 1. \\
+The first input to a void cell does not infringe the stipulation of the puzzle. This statement holds true for all empty cells in the grid. Hence, resulting in the algorithm never having to backtrack - regardless of the initial configuration of the grid. Therefore since it always produces a valid digit on the first encounter with the cell, it will never have to backtrack to previous nodes in the tree of 'to-fill nodes'. Thus the order is constant, such that $n = O(1^k) $, where $k$ is the upper bound being $k = 64$. However, $n = 1^{64}$ is still 1. \\
 Hence, the complexity of the best case is  $O(1)$, which means it takes constant time and produces a straight line function.
 \end{flushleft}
 \begin{flushleft}
@@ -211,22 +217,22 @@ An acyclic tree is created as an analogy for our valid output. We assign an arbi
 
 \begin{flushleft}
 \textbf{Worst Case:}\\
-Similar to that of the average case, in this scenario, we backtrack at every encounter with a candidate cell, and making the maximum number of this recursive process in order to output a valid solution to the puzzle, or to have exhausted all means to find a solution resulting in the conclusion that no solution i possible for the particular puzzle. In the worst case, we would have the least number of clues; 17 clues at the initial configuration, hence, the grid having 64 candidate cells ($k = 81-17 = 64$). Thus we are certain that our $k$ ican have a maximum value of 64. In the absolute worst case, we will have a order $O(9^64)$, where $n = 9 and k = 64$. We can further claim that this is the upper bound for our worst case.  
+Similar to that of the average case, in this scenario, we backtrack at every encounter with a candidate cell, and making the maximum number of this recursive process in order to output a valid solution to the puzzle, or to have exhausted all means to find a solution resulting in the conclusion that no solution is possible for the particular puzzle. In the worst case, we would have the least number of clues; 17 clues at the initial configuration, hence, the grid having 64 candidate cells ($k = 81-17 = 64$). Thus we are certain that our $k$ can have a maximum value of 64. In the absolute worst case, we will have a order $O(9^{64})$, where $n = 9$ and $k = 64$. We can further claim that this is the upper bound for our worst case which has a general exponential trend.
 \end{flushleft}
 \subsection{Optimality}
 \begin{flushleft}
 Viewing various reports completed on the topic of the solving of a standard Sudoku puzzle, we have compared various manners in which the puzzle has been solved. 
 Among these methods were : human intuition of solving, genetic programming combined with heuristic moves - these strategies implemented the techniques such as naked single method, hidden single method. 
-Another approach to solving the puzzle investigated in \textsl{Aref-Fiorella-KexJobb-sist report} the  was the pencil-paper-method. This method entails several methods which are used by human players in solving the puzzle, which are difficult to apply to a computer program, as a human player having a greater overall view of the Sudoku grid. Human solving includes the usage of a combination techniques namely: Unique missing candidate, Naked single method and backtracking. From the results in this particular report, we note that the pencil-paper-method performs better than the brute force method. Furthermore, when we compare this method to the backtracking method, there is a point at which they co-inside, however for lower level puzzles, the pencil-paper-method still dominates in favour of a better time complexity. 
+Another approach to solving the puzzle investigated in \textsl{Aref-Fiorella-KexJobb-sist report} this  was the pencil-paper-method. This method entails several methods which are used by human players in solving the puzzle, which are difficult to apply to a computer program, as a human player having a greater overall view of the Sudoku grid. Human solving includes the usage of a combination techniques namely: Unique missing candidate, Naked single method and backtracking. From the results in this particular report, we note that the pencil-paper-method performs better than the brute force method. Furthermore, when we compare this method to the backtracking method, there is a point at which they co-inside, however for lower level puzzles, the pencil-paper-method still dominates in favour of a better time complexity. 
 \end{flushleft}
 
 \begin{flushleft}
-From \textit{PatrikBerggrenDavidNilsson'sreport} a method that was implemented to solve the puzzle is named rule-based algorithm. This algorithm's performance was seen as the best, performing better that the backtracking solver. The backtracking solver and the rule-based algorithm are both deterministic, hence reducing a depiction of the execution time as a distribution which is precise with a low variance. This claim indicates that although the backtracking method is feasible, it is not optimal as the rule-based solver performs better than that of the backtracking solver in the respect of performance measure. 
+From \textit{Patrik-Berggren-David-Nilsson's-report} a method that was implemented to solve the puzzle is named rule-based algorithm. This algorithm's performance was seen as the best, performing better that the backtracking solver. The backtracking solver and the rule-based algorithm are both deterministic, hence reducing a depiction of the execution time as a distribution which is precise with a low variance. This claim indicates that although the backtracking method is feasible, it is not optimal as the rule-based solver performs better than that of the backtracking solver in the respect of performance measure. We thus note that there is room for improvement to the backtracking approach for solving the udoku puzzle.
 \end{flushleft}
 
 \subsection{Clarity and Completeness}
 \begin{flushleft}
-As a group, we feel that the backtracking algorithm is not the optimal manner in which to go about solving a Sudoku puzzle. Theoretically the puzzle can be solved in this recursive manner. The concept can be followed through, thus we can claim it is fairly clear algorithm, although not seen as efficient in terms of performance measure. 
+As a group, we feel that the backtracking algorithm is not the optimal manner in which to go about solving a Sudoku puzzle. Theoretically the puzzle can be solved in this recursive manner. The concept can be followed through, thus we can claim it is a fairly clear algorithm, although not seen as efficient in terms of performance measure. 
 \end{flushleft}
 
 \section{Experimental Methodology}
@@ -238,7 +244,7 @@ With the aid of the following hardware and software we were able to complete thi
 \item RAM
 \item Eclipse IDE Java
 \end{itemize}
-\subsection{}{Implementation}
+\subsection{Implementation}
 Noting the power that the Backtracking Algorithm posses, we have implemented a version of the Backtracking algorithm in our algorithm which solves a Sudoku-puzzle.\\
 The Sudoku-solver algorithm starts off with a data set which is a Sudoku-grid with a set number of initial values entered.% How many initial values in the grid???
 %Where does the grid start being checked from
@@ -307,7 +313,7 @@ A shape composed of equal sized, side-adjacent squares. Often used for Sudoku re
 \subsection{Data set}
 \subsection{Results}
 \section{References}
-\section{Algorithm implementation}
+
 \begin{itemize}
 \item \url{https://www.google.com/search?client=ubuntu&channel=fs&q=Magic+square+&ie=utf-8&oe=utf-8 (2016-09-23)}
 \item \url{https://www.google.com/search?client=ubuntu&channel=fs&q=Magic+square+&ie=utf-8&oe=utf-8#channel=fs&q=sudoku+definition (2016-09-23)}
@@ -321,6 +327,7 @@ A shape composed of equal sized, side-adjacent squares. Often used for Sudoku re
 \item \url http://www.diva-portal.org/smash/get/diva2:721641/FULLTEXT01.pdf (2016-10-29)
 \item \url http://www.csc.kth.se/utbildning/kth/kurser/DD143X/dkand13/Group1Vahid/report/Aref-Fiorella-KexJobb-sist.pdf (2016-10-29)
 \item \url http://www.csc.kth.se/utbildning/kth/kurser/DD143X/dkand12/Group6Alexander/final/PatrikBerggrenDavidNilsson.report.pdf (2016-10-30)
+\item \url https://projecteuler.net/project/resources/p096sudoku.txt (2016-10-30)
 \end{itemize}
 
 \section{Acknowledgments}
@@ -352,3 +359,4 @@ Write-up implementation & & Conclusion\\
 \end{tabular}
 
 \end{document}
+\grid
