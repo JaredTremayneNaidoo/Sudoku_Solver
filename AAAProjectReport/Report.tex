@@ -215,7 +215,13 @@ Similar to that of the average case, in this scenario, we backtrack at every enc
 \end{flushleft}
 \subsection{Optimality}
 \begin{flushleft}
-TO ADD!
+Viewing various reports completed on the topic of the solving of a standard Sudoku puzzle, we have compared various manners in which the puzzle has been solved. 
+Among these methods were : human intution of solving, genetic programming combined with heuristic moves - these strategies implemented the techniques such as naked single method, hidden single method. 
+Another appraoch to solving the puzzle investigated in \textsl{Aref-Fiorella-KexJobb-sist report} the  was the pencil-paper-method. This method entails several methods which are used by human players in solving the puzzle, which are difficult to apply to a computer program, as a human player having a greater overall view of the Sudoku grid. Human solving includes the usage of a combination techniques namely: Unique missing candidate, Naked single method and backtracking. From the results in this particular report, we note that the pencil-paper-method performes better than the brute force method. Furthermore, when we compare this method to the backtracking method, there is a point at which they co-inside, however for lower level puzzles, the pencil-paper-method still dominates in favour of a better time complexity. 
+\end{flushleft}
+
+\begin{flushleft}
+From \textit{PatrikBerggrenDavidNilsson'sreport} a method that was implemented to solve the puzzle is named rule-based algorithm. This algorithm's performance was seen as the best, performing better that the backtacking solver. The backtracking solver and the rule-based algorithm are both deterministic, hence reducing a depiction of the execution time as a districution which is precise with a low variance. This claim indicates that although the backtracking method is feasible, it is not optimal as the rule-baseed solver performs better than that of the backtracking solver in the respect of performance measure. 
 \end{flushleft}
 
 \subsection{Clarity and Completeness}
@@ -224,7 +230,14 @@ As a group, we feel that the backtracking algorithm is not the optimal manner in
 \end{flushleft}
 
 \section{Experimental Methodology}
-TO ADD INTRO!
+As a joint team effort, we worked toward producing theoratical as well as experimental analysis of the standard Sudoku Puzzle. We have implemented the algorithm using th eclipse IDE, writing in the Java programming language. A database of test samples (of varying difficulty and initial configurations) were produced, which had been stored and solved by our algorithm. The results obtained were used to draw conclusions in this report. The results depict the time used to solve the puzzle with our implemented algorithm in milliseconds for each grid. The experiment was carried out ????????? number of times to obtain a trend to classify our findings as. A graph representing the results of number of candidate cells as the independent variable, and time measured in milliseconds as the dependant variable. \\
+With the aid of the following hardware and software we were able to complete this experiment. The following items were used :
+\begin{itemize}
+\item Windows 10
+\item Lenovo 
+\item RAM
+\item Eclipse IDE Java
+\end{itemize}
 \subsection{}{Implementation}
 Noting the power that the Backtracking Algorithm posses, we have implemented a version of the Backtracking algorithm in our algorithm which solves a Sudoku-puzzle.\\
 The Sudoku-solver algorithm starts off with a data set which is a Sudoku-grid with a set number of initial values entered.% How many initial values in the grid???
@@ -232,15 +245,7 @@ The Sudoku-solver algorithm starts off with a data set which is a Sudoku-grid wi
 %How is valid input chose? is it the first input that is valid. yes
 The Sudoku-solver starts scanning the Sudoku-grid from the very first empty cell from the top left-hand corner. The solver views all the values that have already been entered in that cell's particular row, column and it's sub-grid. If there is a value that is then applicable for that cell, it takes the first value of the possible list of values applicable for the cell, and fills it in that cell. The solver keeps scanning the Sudoku-grid in an iterative manner, viewing empty cells row-by-row. If at any particular point the solver notes that a cell - let's call this cell B,  has only one possible value that it can be filled with, but that value was previously allocated to another cell %Clarify
 (not a initial value in that cell's particular row or column)- let's call this cell A, then the solver 'backtracks' - meaning, that the solver undoes all previous steps taken to the point where cell A is allocated a value. Then, cell A is allocated another value from the list possible values it could take on, and the Sudoku-solver starts its process from this point, with the aim to satisfy cell B with an eligible input. The solver recursively carries out this process until obtaining it's goal of solving the Sudoku-puzzle.  
-\subsection{Optimization}
-In order to reduce the time taken to solve the puzzle, we have implemented certain conditions that the solver would have to adhere to. \\
-The rules are: 
-\begin{enumerate}
-\item No other value is allowed according to the allowed values matrix
-\item A certain value is allowed in no other square in the same section (sub-grid). 
-\item A certain value is allowed in no other square in the same row or column
-% \item A certain value is allowed only once in a certain column or row inside a sub-grid, hence we can eliminate this integer from the row or column in the other sections. 
-\end{enumerate}
+
 
 \section{Implementation: Trial}
 \begin{flushleft}
@@ -264,9 +269,20 @@ Rule 3: Similar to that of rule 2. We just apply the same concept to each row an
 %Graphs comparing brute force and backtraking
 %various datasets 
 \subsection{Interpretation of results}
+\begin{flushleft}
+As a result of performing analysis and experiments, we have gained insight into the backtracking algorithm. The complexity of the backtracking algorithm is illustrated in the graphs above, which depict that the time complexity is in some relation proportional to the number of candidate cells with which the puzzle is initialised. 
+\\
+From the graphical representations and analysis performed we see the exponential base instict of the backtracking algorithm. As the number of empty tiles increase, so does the time taken to solve the puzzle. \\
+
+We can deduce from the results that the algorithm utilized is not effecient i scenarios with large sets of data. The result of this is that it is demanding on time when the number of tiles to be filled on the board increase. However, for much easier leveled puzzles, the algorithm performs in an effecient manner. This can be further substantiated by the graphs produced. The complexity of this case has a linear nature, which tends toward a quadratic base nature. \\
+
+In particularly more difficult puzzles, the results resemble the trends of exponential graphs. As the number of candidate cells increase, the time taken to solve the puzzle increases in an exponential manner. We can support this claim by mere interpretation that the algorithm having to perform backtracking at each step, resulting in performing worse than that of the best case which entails no roll backs. 
+\end{flushleft}
 \section{Theoretical analysis relation to experimental analysis}
 \section{Conclusion}
-
+\begin{flushleft}
+In conclusion, we can state that comparing the Brute Force technique to the Backtracking algorithm, we have reduced that the backtracking technique is comparartively more effecient then to that of the Brute Force Approach, as the running time is less as a result of not exploring every possible path. The Sudoku puzzle will thus be the best at finding the path taking to satisfy the definition of the puzzle. 
+\end{flushleft}
 \section{Glossary}
 \begin{itemize}
 \item Algorithm: a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.
@@ -283,6 +299,8 @@ Rule 3: Similar to that of rule 2. We just apply the same concept to each row an
 A shape composed of equal sized, side-adjacent squares. Often used for Sudoku region variants.
 \item Clue: The cells which are filled with a value at the start configuration.
 \item Depth-first search (DFS): is an algorithm for traversing or searching tree or graph data structures. One starts at the root (selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before backtracking.
+\item Naked Single method:  in a specific cell only one digit remains possible (the last remaining candidate has no other candidates to hide behind and is thus naked). The digit must then go into that cell.
+\item Hidden Single method: for a given digit and house only one cell is left to place that digit. The cell itself has more than one candidate left, the correct digit is thus hidden amongst the rest.
 
 \end{itemize}
 \section{Appendix}
@@ -301,12 +319,16 @@ A shape composed of equal sized, side-adjacent squares. Often used for Sudoku re
 \item\url https://codemyroad.wordpress.com/2014/05/01/solving-sudoku-by-backtracking/ (2016-10-25)
 \item \url https://en.wikipedia.org/wiki/GlossaryofSudoku (2016-10-25)
 \item \url http://www.diva-portal.org/smash/get/diva2:721641/FULLTEXT01.pdf (2016-10-29)
+\item \url http://www.csc.kth.se/utbildning/kth/kurser/DD143X/dkand13/Group1Vahid/report/Aref-Fiorella-KexJobb-sist.pdf (2016-10-29)
+\item \url http://www.csc.kth.se/utbildning/kth/kurser/DD143X/dkand12/Group6Alexander/final/PatrikBerggrenDavidNilsson.report.pdf (2016-10-30)
 \end{itemize}
 
-section{Acknowledgments}
-% \begin{itemize}
-% \item DR H.Vadapali, class notes  
-% \end{itemize}
+\section{Acknowledgments}
+\begin{itemize}
+ \item DR H.Vadapalli for class notes  
+ \item Fiorella Grados and Aref Mohammadi for the experimental comparisons used from their report 'The Sudoku Solver'
+ \item Patrik Berggren and David Nilsson for the results in comparison found in the report 'A study of a Sudoku solving algorithm'
+\end{itemize}
 
 \section{Group contribution}
  
@@ -314,20 +336,18 @@ section{Acknowledgments}
 \setlength{\tabcolsep}{18pt}
 \renewcommand{\arraystretch}{2.5}
  
-{\rowcolors{3}{green!80!yellow!50}{green!70!yellow!40}
+{\rowcolors{3}{green!80!yellow!50}{green!50!yellow!40}
 \begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
 \hline
 \multicolumn{3}{|c|}{Group contribution} \\
 \hline
 Jared Naidoo: 719238& Zayyan Variawa: 852486 &Krupa Prag: 782681 \\
 \hline
-Afghanistan & AF &AFG \\
-Aland Islands & AX   & ALA \\
-Albania &AL & ALB \\
-Algeria    &DZ & DZA \\
-American Samoa & AS & ASM \\
-Andorra & AD & AND   \\
-Angola & AO & AGO \\
+Implemenation of backtracking algorithm & Implemenation of database generation & Theoratical research  \\
+Implemenation of solver algorithm & Theoratical research    & Complexity proof \\
+Theoratical research  & & Experimental analysis \\
+Empirical analysis  & & Comparison between theoratical and experimental analysis\\
+Write-up implementation & & Conclusion\\
 \hline
 \end{tabular}
 
