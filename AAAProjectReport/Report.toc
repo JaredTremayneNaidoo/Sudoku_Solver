@@ -23,7 +23,9 @@
 \contentsline {section}{\numberline {9}Glossary}{16}{section.9}
 \contentsline {section}{\numberline {10}Appendix}{18}{section.10}
 \contentsline {subsection}{\numberline {10.1}Data set}{18}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Results}{18}{subsection.10.2}
-\contentsline {section}{\numberline {11}References}{18}{section.11}
-\contentsline {section}{\numberline {12}Acknowledgments}{19}{section.12}
-\contentsline {section}{\numberline {13}Group contribution}{20}{section.13}
+\contentsline {subsubsection}{\numberline {10.1.1}Sample input}{18}{subsubsection.10.1.1}
+\contentsline {subsection}{\numberline {10.2}Results}{19}{subsection.10.2}
+\contentsline {subsubsection}{\numberline {10.2.1}Sample :Input board, resulting output board and time taken to solve}{19}{subsubsection.10.2.1}
+\contentsline {section}{\numberline {11}References}{19}{section.11}
+\contentsline {section}{\numberline {12}Acknowledgments}{20}{section.12}
+\contentsline {section}{\numberline {13}Group contribution}{21}{section.13}

@@ -311,10 +311,68 @@ A shape composed of equal sized, side-adjacent squares. Often used for Sudoku re
 \end{itemize}
 \section{Appendix}
 \subsection{Data set}
+\subsubsection{Sample input}
+\begin{flushleft}
+0 0 3 * 0 2 0 * 6 0 0\\
+9 0 0 * 3 0 5 * 0 0 1\\
+0 0 1 * 8 0 6 * 4 0 0\\
+* * * * * * * * * * * \\
+0 0 8 * 1 0 2 * 9 0 0\\
+7 0 0 * 0 0 0 * 0 0 8\\
+0 0 6 * 7 0 8 * 2 0 0\\
+* * * * * * * * * * * \\
+0 0 2 * 6 0 9 * 5 0 0\\
+8 0 0 * 2 0 3 * 0 0 9\\
+0 0 5 * 0 1 0 * 3 0 0\\
+\end{flushleft}
+\begin{flushleft}
+\begin{itemize}
+\item 0 = candidate cell
+\item Integer of value from 1 to 9 = clue 
+\item * = demarcating of the grids
+\end{itemize}
+\end{flushleft}
+\newpage
 \subsection{Results}
+\subsubsection{Sample :Input board, resulting output board and time taken to solve}
+\textbf{\title{Input board}}
+
+\begin{flushleft}
+0 0 \textbf{3} * 0 \textbf{2} 0 * \textbf{6} 0 0\\
+\textbf{9} 0 0 * \textbf{3} 0 \textbf{5} * 0 0 \textbf{1}\\
+0 0 \textbf{1} * \textbf{8} 0 \textbf{6} *\textbf{ 4} 0 0\\
+* * * * * * * * * * * \\
+0 0 \textbf{8} * \textbf{1} 0 \textbf{2} * \textbf{9} 0 0\\
+\textbf{7} 0 0 * 0 0 0 * 0 0 \textbf{8}\\
+0 0 \textbf{6} * \textbf{7} 0 \textbf{8} * \textbf{2} 0 0\\
+* * * * * * * * * * * \\
+0 0 \textbf{2} * \textbf{6} 0 \textbf{9} * \textbf{5} 0 0\\
+\textbf{8} 0 0 * \textbf{2} 0\textbf{ 3} * 0 0 \textbf{9}\\
+0 0 \textbf{5} * 0 \textbf{1} 0 * \textbf{3} 0 0
+\end{flushleft}
+
+
+\begin{flushleft}
+\textbf{\title{Output board}}\\
+4 8 \textbf{3} * 9 \textbf{2} 1 *\textbf{6} 5 7\\
+\textbf{9} 6 7 * \textbf{3} 4 \textbf{5} * 8 2 \textbf{1}\\
+2 5 \textbf{1} * \textbf{8} 7 \textbf{6} * \textbf{4} 9 3\\
+* * * * * * * * * * * \\
+5 4 \textbf{8} * \textbf{1} 3 \textbf{2} * \textbf{9} 7 6\\
+\textbf{7} 2 9 * 5 6 4 * 1 3 \textbf{8}\\
+1 3 \textbf{6} * \textbf{7} 9 \textbf{8} * \textbf{2} 4 5\\
+* * * * * * * * * * * \\
+3 7 \textbf{2} * \textbf{6} 8 \textbf{9} * \textbf{5} 1 4\\
+\textbf{8} 1 4 * \textbf{2} 5 \textbf{3 }* 7 6 \textbf{9}\\
+6 9 \textbf{5} * 4 \textbf{1} 7 * \textbf{3} 8 2\\
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{Time taken to solve: 7.3320672 miliseconds}
+\end{flushleft}
 \section{References}
 
-\begin{itemize}
+\begin{enumerate}
 \item \url{https://www.google.com/search?client=ubuntu&channel=fs&q=Magic+square+&ie=utf-8&oe=utf-8 (2016-09-23)}
 \item \url{https://www.google.com/search?client=ubuntu&channel=fs&q=Magic+square+&ie=utf-8&oe=utf-8#channel=fs&q=sudoku+definition (2016-09-23)}
 \item \url{http://timesofindia.indiatimes.com/home/sunday-times/What-is-the-history-of-Sudoku/articleshow/9169332.cms (2016-09-23)}
@@ -328,13 +386,14 @@ A shape composed of equal sized, side-adjacent squares. Often used for Sudoku re
 \item \url http://www.csc.kth.se/utbildning/kth/kurser/DD143X/dkand13/Group1Vahid/report/Aref-Fiorella-KexJobb-sist.pdf (2016-10-29)
 \item \url http://www.csc.kth.se/utbildning/kth/kurser/DD143X/dkand12/Group6Alexander/final/PatrikBerggrenDavidNilsson.report.pdf (2016-10-30)
 \item \url https://projecteuler.net/project/resources/p096sudoku.txt (2016-10-30)
-\end{itemize}
+\end{enumerate}
 
 \section{Acknowledgments}
 \begin{itemize}
  \item DR H.Vadapalli for class notes  
  \item Fiorella Grados and Aref Mohammadi for the experimental comparisons used from their report 'The Sudoku Solver'
  \item Patrik Berggren and David Nilsson for the results in comparison found in the report 'A study of a Sudoku solving algorithm'
+ \item The dataset used to generate results refernce[13] 
 \end{itemize}
 
 \section{Group contribution}

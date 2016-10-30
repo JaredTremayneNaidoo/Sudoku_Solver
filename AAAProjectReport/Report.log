@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.13)  31 OCT 2016 01:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.13)  31 OCT 2016 01:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -395,199 +395,189 @@ Underfull \hbox (badness 2197) in paragraph at lines 178--179
 Underfull \vbox (badness 10000) detected at line 187
  []
 
-[10] [11] [12] [13] [14] [15] [16]
-Overfull \hbox (28.39989pt too wide) in paragraph at lines 318--319
-[][]$\OT1/cmtt/m/n/12 https : / / www . google . com / search ? client = ubuntu
- & channel = fs & q = Magic +
- []
-
-[17]
-Overfull \hbox (28.39989pt too wide) in paragraph at lines 319--320
+[10] [11] [12] [13] [14] [15] [16] [17] [18]
+Overfull \hbox (28.39989pt too wide) in paragraph at lines 376--377
 [][]$\OT1/cmtt/m/n/12 https : / / www . google . com / search ? client = ubuntu
  & channel = fs & q = Magic +
  []
 
 
-Overfull \hbox (61.2749pt too wide) in paragraph at lines 319--320
+Overfull \hbox (28.39989pt too wide) in paragraph at lines 377--378
+[][]$\OT1/cmtt/m/n/12 https : / / www . google . com / search ? client = ubuntu
+ & channel = fs & q = Magic +
+ []
+
+
+Overfull \hbox (61.2749pt too wide) in paragraph at lines 377--378
 \OT1/cmtt/m/n/12 square + &ie = utf-[]8 & oe = utf-[]8 # channel = fs & q = sud
 oku + definition(2016-[]09-[]23)$[] 
  []
 
-
-Overfull \hbox (154.89995pt too wide) in paragraph at lines 320--321
+[19]
+Overfull \hbox (154.89995pt too wide) in paragraph at lines 378--379
 [][]$\OT1/cmtt/m/n/12 http : / / timesofindia . indiatimes . com / home / sunda
 y-[]times / What-[]is-[]the-[]history-[]of-[]Sudoku /
  []
 
 
-Overfull \hbox (17.04988pt too wide) in paragraph at lines 321--322
+Overfull \hbox (17.04988pt too wide) in paragraph at lines 379--380
 [][]$\OT1/cmtt/m/n/12 https : / / illuminations . nctm . org / Lesson . aspx ? 
 id = 655(2016-[]09-[]23)$[] 
  []
 
 
-Overfull \hbox (135.37494pt too wide) in paragraph at lines 322--323
+Overfull \hbox (135.37494pt too wide) in paragraph at lines 380--381
 [][]$\OT1/cmtt/m/n/12 http : / / searchsecurity . techtarget . com / definition
  / brute-[]force-[]cracking(2016-[]09-[]29)$[] 
  []
 
 
-Overfull \hbox (22.22488pt too wide) in paragraph at lines 323--324
+Overfull \hbox (22.22488pt too wide) in paragraph at lines 381--382
 [][]$\OT1/cmtt/m/n/12 https : / / www . learner . org / courses / learningmath 
 / algebra / keyterms .
  []
 
 
-Overfull \hbox (58.42735pt too wide) in paragraph at lines 325--326
+Overfull \hbox (58.42735pt too wide) in paragraph at lines 383--384
 [][]$\OT1/cmtt/m/n/12 h$[]\OT1/cmr/m/n/12 ttps://codemyroad.wordpress.com/2014/
 05/01/solving-sudoku-by-backtracking/
  []
 
 
-Overfull \hbox (12.8473pt too wide) in paragraph at lines 327--328
+Overfull \hbox (12.8473pt too wide) in paragraph at lines 385--386
 [][]$\OT1/cmtt/m/n/12 h$[]\OT1/cmr/m/n/12 ttp://www.diva-portal.org/smash/get/d
 iva2:721641/FULLTEXT01.pdf
  []
 
 
-Overfull \hbox (116.13095pt too wide) in paragraph at lines 328--329
+Overfull \hbox (116.13095pt too wide) in paragraph at lines 386--387
 [][]$\OT1/cmtt/m/n/12 h$[]\OT1/cmr/m/n/12 ttp://www.csc.kth.se/utbildning/kth/k
 urser/DD143X/dkand13/Group1Vahid/report/Aref-
  []
 
 
-Overfull \hbox (303.76375pt too wide) in paragraph at lines 329--330
+Overfull \hbox (303.76375pt too wide) in paragraph at lines 387--388
 [][]$\OT1/cmtt/m/n/12 h$[]\OT1/cmr/m/n/12 ttp://www.csc.kth.se/utbildning/kth/k
 urser/DD143X/dkand12/Group6Alexander/final/PatrikBerggrenDavidNilsson.report.pd
 f
  []
 
 
-Overfull \hbox (7.44594pt too wide) in paragraph at lines 330--331
+Overfull \hbox (7.44594pt too wide) in paragraph at lines 388--389
 [][]$\OT1/cmtt/m/n/12 h$[]\OT1/cmr/m/n/12 ttps://projecteuler.net/project/resou
 rces/p096sudoku.txt (2016-10-30) 
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 351--351
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []|\OT1/cmr/m/n/12 Jared Naidoo:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 []|\OT1/cmr/m/n/12 Krupa Prag:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--353
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\OT1/cmr/m/n/12 Implementation
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 353--353
+Underfull \hbox (badness 4001) in paragraph at lines 412--412
 \OT1/cmr/m/n/12 of back-track-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--353
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 []|\OT1/cmr/m/n/12 Implementation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--353
+Underfull \hbox (badness 10000) in paragraph at lines 412--412
 \OT1/cmr/m/n/12 of database
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 []|\OT1/cmr/m/n/12 Theoretical
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 413--413
 []|\OT1/cmr/m/n/12 Implementation
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 354--354
+Underfull \hbox (badness 4378) in paragraph at lines 413--413
 \OT1/cmr/m/n/12 of solver al-go-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 413--413
 []|\OT1/cmr/m/n/12 Theoretical
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
 []|\OT1/cmr/m/n/12 Complexity
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--355
+Underfull \hbox (badness 10000) in paragraph at lines 414--414
 []|\OT1/cmr/m/n/12 Theoretical
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 []|\OT1/cmr/m/n/12 Experimental
  []
 
 
-Underfull \hbox (badness 7685) in paragraph at lines 356--357
+Underfull \hbox (badness 7685) in paragraph at lines 415--416
 \OT1/cmr/m/n/12 tween the-o-ret-i-
  []
 
 
-Underfull \hbox (badness 1205) in paragraph at lines 356--357
+Underfull \hbox (badness 1205) in paragraph at lines 415--416
 \OT1/cmr/m/n/12 cal and ex-per-i-
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 361.
-[19] [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 361.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 420.
+[20] [21]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 420.
  (./Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 361.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 361.
-
-
-Package rerunfilecheck Warning: File `Report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Report.out':
-(rerunfilecheck)             Before: 27C35C15E6A040469BDEF7E9E1267468;1806
-(rerunfilecheck)             After:  51190AFC34B78D6B32549E88C5259E21;1745.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 361.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 420.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 420.
+Package rerunfilecheck Info: File `Report.out' has not changed.
+(rerunfilecheck)             Checksum: 6AB34EF3A4634AA1859FF1C355D17DE7;1948.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 420.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 346 ({)
+### simple group (level 1) entered at line 405 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6693 strings out of 493085
- 94188 string characters out of 6136916
- 188719 words of memory out of 5000000
- 10039 multiletter control sequences out of 15000+600000
+ 6709 strings out of 493085
+ 94348 string characters out of 6136916
+ 192719 words of memory out of 5000000
+ 10040 multiletter control sequences out of 15000+600000
  13578 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,40p,1140b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.14} has been referenced but
- does not exist, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmtt12.pfb>
-Output written on Report.pdf (20 pages, 138521 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Report.pdf (21 pages, 141218 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
- 290 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 351 PDF objects out of 1000 (max. 8388607)
+ 315 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 

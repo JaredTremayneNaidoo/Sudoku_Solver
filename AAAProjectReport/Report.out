@@ -23,7 +23,9 @@
 \BOOKMARK [1][-]{section.9}{Glossary}{}% 23
 \BOOKMARK [1][-]{section.10}{Appendix}{}% 24
 \BOOKMARK [2][-]{subsection.10.1}{Data set}{section.10}% 25
-\BOOKMARK [2][-]{subsection.10.2}{Results}{section.10}% 26
-\BOOKMARK [1][-]{section.11}{References}{}% 27
-\BOOKMARK [1][-]{section.12}{Acknowledgments}{}% 28
-\BOOKMARK [1][-]{section.13}{Group contribution}{}% 29
+\BOOKMARK [3][-]{subsubsection.10.1.1}{Sample input}{subsection.10.1}% 26
+\BOOKMARK [2][-]{subsection.10.2}{Results}{section.10}% 27
+\BOOKMARK [3][-]{subsubsection.10.2.1}{Sample :Input board, resulting output board and time taken to solve}{subsection.10.2}% 28
+\BOOKMARK [1][-]{section.11}{References}{}% 29
+\BOOKMARK [1][-]{section.12}{Acknowledgments}{}% 30
+\BOOKMARK [1][-]{section.13}{Group contribution}{}% 31
